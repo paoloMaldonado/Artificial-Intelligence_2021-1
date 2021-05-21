@@ -96,7 +96,20 @@ step12_input2 = [1 tansig(step12_input1*weight1)];
 step12_input3 = [1 tansig(step12_input2*weight2)];
 step12_finalOutput = tansig(step12_input3*weight3);
 
-predicted_yi = [step1_finalOutput step2_finalOutput step3_finalOutput step4_finalOutput step5_finalOutput step6_finalOutput step7_finalOutput step8_finalOutput step9_finalOutput step10_finalOutput step11_finalOutput step12_finalOutput];
+%predicted_yi = [step1_finalOutput step2_finalOutput step3_finalOutput step4_finalOutput step5_finalOutput step6_finalOutput step7_finalOutput step8_finalOutput step9_finalOutput step10_finalOutput step11_finalOutput step12_finalOutput];
+
+predicted_yi = [step1_finalOutput 
+step2_finalOutput 
+step3_finalOutput 
+step4_finalOutput 
+step5_finalOutput 
+step6_finalOutput 
+step7_finalOutput 
+step8_finalOutput 
+step9_finalOutput 
+step10_finalOutput
+step11_finalOutput 
+step12_finalOutput];
 
 [Desnormalizado] = mapminmax('reverse', predicted_yi, PS );
 
